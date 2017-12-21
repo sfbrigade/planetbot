@@ -19,7 +19,7 @@ We use GoLang for writing lambda functions. If you’ve Go already installed you
 + `$ brew install docker`
 
 ### Clone the repo:
-+ `$ git clone https://github.com/sfbrigade/planetbot.git`
++ `$ go get -u github.com/sfbrigade/planetbot`
 
 ### Build
 This'll build the zip file that you can upload to AWS Lambda
