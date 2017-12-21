@@ -1,18 +1,7 @@
 package main
 
-import (
-	"encoding/json"
+import "github.com/eawsy/aws-lambda-go-core/service/lambda/runtime"
 
-	"github.com/eawsy/aws-lambda-go/service/lambda/runtime"
-)
-
-func handle(evt json.RawMessage, ctx *runtime.Context) (interface{}, error) {
+func Handle(evt interface{}, ctx *runtime.Context) (string, error) {
 	return "Hello, World!", nil
-}
-
-func init() {
-	runtime.HandleFunc(handle)
-}
-
-func main() {
 }
