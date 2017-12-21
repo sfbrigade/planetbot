@@ -16,7 +16,7 @@ We use GoLang for writing lambda functions. If you’ve Go already installed you
 + `$ brew install golang`
 
 ### Docker - it’s used for the AWS Lambda Go shim
-+ `https://docs.docker.com/docker-for-mac/install/#download-docker-for-mac`
++ Go to https://docs.docker.com/docker-for-mac/install/#download-docker-for-mac to install Docker for OSX
 
 ### Clone the repo:
 + `$ go get -u github.com/sfbrigade/planetbot`
