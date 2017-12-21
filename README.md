@@ -21,9 +21,11 @@ We use GoLang for writing lambda functions. If you’ve Go already installed you
 ### Clone the repo:
 + `$ go get -u github.com/sfbrigade/planetbot`
 
+### Install Lambda Shim
++ Follow directions in: https://github.com/eawsy/aws-lambda-go-shim#quick-hands-on
+
 ### Build
 This'll build the zip file that you can upload to AWS Lambda
-
 + `make`
 
 ### Links
