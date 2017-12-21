@@ -22,12 +22,13 @@ We use GoLang for writing lambda functions. If you’ve Go already installed you
 + `$ go get -u github.com/sfbrigade/planetbot`
 
 ### Install Lambda Shim
-+ `$ brew install wget`
-+ Follow directions in: https://github.com/eawsy/aws-lambda-go-shim#quick-hands-on
+Below are the two commands from [these instructions](https://github.com/eawsy/aws-lambda-go-shim#quick-hands-on) you'll need to perform:
++ `$ docker pull eawsy/aws-lambda-go-shim:latest`
++ `$ go get -u -d github.com/eawsy/aws-lambda-go-core/...`
 
 ### Build
 This'll build the zip file that you can upload to AWS Lambda
-+ `make`
++ `$ make`
 
 ### Links
 + https://console.aws.amazon.com/lambda/home?region=us-east-1#/functions/baaqmpd?tab=graph
