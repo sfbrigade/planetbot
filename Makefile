@@ -77,3 +77,35 @@ clean:
 
 .PHONY: clean
 
+lambda-create:
+	aws lambda create-function \
+		--function-name planetbot \
+		--runtime python2.7 \
+		--handler handler.Handle \
+		--zip-file fileb://handler.zip \
+		--role arn:aws:iam::097545936362:role/service-role/lambda
+
+.PHONY: lambda-create
+
+lambda-upload:
+	aws lambda update-function-code \
+		--function-name planetbot \
+		--zip-file fileb://handler.zip
+
+.PHONY: lambda-upload
+
+lambda-invoke:
+	touch /tmp/output.txt; \
+	aws lambda invoke \
+		--function-name planetbot \
+		/tmp/output.txt; \
+	cat /tmp/output.txt
+
+.PHONY: lambda-invoke
+
+update:
+	make docker
+	make lambda-upload
+	make lambda-invoke
+
+.PHONY: update
