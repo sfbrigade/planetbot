@@ -16,20 +16,12 @@ Welcome! To get started on development:
 + Configure AWS CLI with `aws configure` (you'll be given credentials with AWS access)
 
 ### Golang (optional)
-We use GoLang for writing lambda functions. If you’ve Go already installed you don’t need the following:
+We use GoLang (go1.8) for writing lambda functions. If you’ve Go already installed you don’t need the following:
 + Install Brew from https://brew.sh
 + `$ brew install golang`
 
-### Docker - it’s used for the AWS Lambda Go shim
-+ Go to https://docs.docker.com/docker-for-mac/install/#download-docker-for-mac to install Docker for OSX
-
 ### Clone the repo:
 + `$ go get -u github.com/sfbrigade/planetbot`
-
-### Install Lambda Shim
-Below are the two commands from [these instructions](https://github.com/eawsy/aws-lambda-go-shim#quick-hands-on) you'll need to perform:
-+ `$ docker pull eawsy/aws-lambda-go-shim:latest`
-+ `$ go get -u -d github.com/eawsy/aws-lambda-go-core/...`
 
 ### Build
 This'll build the zip file that you can upload to AWS Lambda
