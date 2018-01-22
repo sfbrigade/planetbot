@@ -35,7 +35,7 @@ This'll build the zip file that you can upload to AWS Lambda
 
 There are helpers in Makefile to create, upload and invoke the lambda code.
 
-+ To begin, let's create a lambda function: `make lambda-create`
++ To begin, let's create a lambda function: `make lambda-create` (Note: this may fail if the function already exists online; that's fine.)
 + Then run `make update` to upload the code and invoke it.
 
 From now after you make changes to the Go code, then can just run `make update` to upload the code and invoke it from command line.
